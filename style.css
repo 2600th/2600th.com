@@ -1,0 +1,87 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+@font-face
+{
+    font-family: my_font;
+    src: url('my_font.ttf');
+}
+
+.hr { 
+	width:380px;
+	height:0;
+	border-bottom:dotted 2px black;
+}
+
+html {
+	height: 100%;
+}
+
+ul{
+	width: 300px;
+}
+
+body {
+	background: #fff;
+	border-top: 8px solid #eee;
+	padding: 80px;
+	color: #666;
+  
+}
+
+#panel.kunkka{
+    position: absolute;
+	top: 30%;
+    left: 25%;
+}
+
+#content.tide{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -150px;
+    width: 150px;
+    height: 150px;
+}
+
+p {
+	font-family: my_font;
+	font-size: 20pt; 
+	line-height: 28px;
+	font-weight: lighter;
+	width: 380px;
+	text-align: left;
+	margin-bottom: 24px;
+	
+}
+p strong {
+	font-weight: bold;
+}
+
+p.hello {
+	color: #666;
+}
+
+p.tiny {
+	padding-top: 24px;
+	font-size: 11px;
+}
+
+a {
+	color: #669966;
+	font-family: my_font;
+	font-size: 20pt; 
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: #19540A;
+	text-shadow: 0 0 2px #fff;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+
