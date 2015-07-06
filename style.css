@@ -34,13 +34,10 @@ body {
 
 #panel.kunkka{
     position: absolute;
-	top: 100px;
-	left: 100px;
 }
 
 #content.tide{
-	top: 100px;
-	left: 100px;
+	left: 20%;
     	width: 150px;
     	height: 150px;
     
@@ -48,6 +45,8 @@ body {
 
 #main.dota{
 	position: relative;
+	top: 10%;
+	left: 50%;
 }
 
 p {
