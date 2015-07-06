@@ -39,13 +39,10 @@ body {
 }
 
 #content.tide{
-    position: relative;
-    top: 10%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -150px;
-    width: 150px;
-    height: 150px;
+	margin: 0;
+    padding: 0;
+    text-align: center;
+    
 }
 
 p {
