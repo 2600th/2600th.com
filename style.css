@@ -35,11 +35,12 @@ body {
 #panel.kunkka{
     position: absolute;
 	top: 10%;
-	left: 50%;
+	left: 20%;
 }
 
 #content.tide{
 	top: 10%;
+	left: 50%;
     	width: 150px;
     	height: 150px;
     
