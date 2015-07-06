@@ -33,13 +33,13 @@ body {
 }
 
 #panel.kunkka{
-    position: absolute;
+	left: 10px;
+    	position: absolute;
 }
 
 #content.tide{
     	width: 150px;
     	height: 150px;
-    
 }
 
 #main.dota{
