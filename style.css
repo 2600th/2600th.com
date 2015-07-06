@@ -39,9 +39,12 @@ body {
 }
 
 #content.tide{
-	margin: 0;
-    padding: 0;
-    text-align: center;
+	position: relative;
+    	top: 10%;
+    	left: 60%;
+    	margin-top: -50px;
+    	width: 150px;
+    	height: 150px;
     
 }
 
