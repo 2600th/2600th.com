@@ -39,7 +39,7 @@ body {
 }
 
 #content.tide{
-    position: absolute;
+    position: relative;
     top: 10%;
     left: 50%;
     margin-top: -50px;
