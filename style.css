@@ -34,8 +34,8 @@ body {
 
 #panel.kunkka{
     position: absolute;
-	top: 30%;
-    left: 60%;
+    top: 30%;
+    left: -20%;
 }
 
 #content.tide{
