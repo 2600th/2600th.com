@@ -39,12 +39,16 @@ body {
 }
 
 #content.tide{
-	position: relative;
-    	top: 10%;
-    	left: 40%;
+	top: 10%;
+	left: 50%;
     	width: 150px;
     	height: 150px;
     
+}
+
+#main.dota{
+	position: relative;
+	text-align: center;
 }
 
 p {
