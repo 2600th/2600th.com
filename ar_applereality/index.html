@@ -1,46 +1,59 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>&lt;model-viewer&gt; template</title>
-    <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="model_1.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>  
-    <script>
-      const modelUrls = [
-        'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_1.glb',
-        'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_2.glb',
-        'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_3.glb',
-      ];
 
-      let currentModel = 0;
+<head>
+  <title>&lt;model-viewer&gt; template</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+</head>
 
-      const modelViewer = document.querySelector('model-viewer');
+<body>
+  <!-- <model-viewer> HTML element -->
+  <model-viewer src="model_1.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp"
+    shadow-intensity="1">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div id="ar-prompt">
+      <img src="ar_hand_prompt.png">
+    </div>
+  </model-viewer>
+  <script>
+    const modelUrls = [
+      'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_1.glb',
+      'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_2.glb',
+      'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_3.glb',
+    ];
 
-      modelViewer.addEventListener('click', () => {
-        // Update current model index
+    let currentModel = 0;
+    let hasDragged = false;
+
+    const modelViewer = document.querySelector('model-viewer');
+
+    // Detect camera movement to set the hasDragged flag
+    modelViewer.addEventListener('camera-change', () => {
+      hasDragged = true;
+    });
+
+    modelViewer.addEventListener('click', () => {
+      if (hasDragged) {
+        // Reset flag for the next interaction
+        hasDragged = false;
+      } else {
+        // Tap without rotation/drag detected, switch model
         currentModel = (currentModel + 1) % modelUrls.length;
-
-        // Change model src
         modelViewer.src = modelUrls[currentModel];
-      });
-    </script>
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-  </body>
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</body>
+
 </html>
