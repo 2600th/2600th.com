@@ -10,14 +10,18 @@
   <style>
     button {
       z-index: 1;
+      margin-bottom: 60px; /* Add margin-bottom to move the button away from the footer */
     }
     footer {
+      position: fixed; /* Make the footer's position fixed */
+      bottom: 0; /* Set the footer at the bottom of the page */
       width: 100%;
       padding: 10px;
       text-align: center;
       font-size: 16px;
       background-color: #f9f9f9;
       box-sizing: border-box;
+      z-index: 2; /* Increase the z-index to make the footer visible */
     }
     footer a {
       color: #0066cc;
