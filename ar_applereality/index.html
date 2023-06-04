@@ -8,6 +8,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" href="./styles.css" rel="stylesheet" />
   <style>
+    html {
+      font-size: 16px;
+    }
+
     button {
       z-index: 1;
       margin-bottom: 60px; /* Add margin-bottom to move the button away from the footer */
@@ -30,6 +34,53 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Timeline styles */
+    .timeline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      left: 10px;
+    }
+    .timeline-line {
+      display: inline-block;
+      width: 30%;
+      height: 2px;
+      background-color: #ccc;
+      vertical-align: middle;
+    }
+    .timeline-point {
+      display: inline-block;
+      text-align: center;
+    }
+    .timeline-point button {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border: none;
+      border-radius: 50%;
+      background-color: #5f00cc;
+      color: white;
+      font-size: 14px;
+      margin: 0 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-point button {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+      }
+      .timeline-line {
+        width: 22%;
+      }
+    }
   </style>
   <link rel="preload" href="https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_2.glb"
     as="fetch" crossorigin>
@@ -40,8 +91,20 @@
 <body>
   <!-- <model-viewer> HTML element -->
   <model-viewer src="https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_1.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp"
-    shadow-intensity="1">
-    <button id="switchModelButton" style="position: absolute; top: 10px; right: 10px">Switch Era</button>
+    shadow-intensity="1" style="padding-top: 80px;">
+    <div class="timeline">
+      <div class="timeline-point">
+        <button id="button1976">1976</button>
+      </div>
+      <div class="timeline-line"></div>
+      <div class="timeline-point">
+        <button id="button2007">2007</button>
+      </div>
+      <div class="timeline-line"></div>
+      <div class="timeline-point">
+        <button id="button2023">2023</button>
+      </div>
+    </div>
     <footer>
       Welcome to the new era of computing! - <a href="https://twitter.com/2600th" target="_blank" rel="noopener noreferrer">Pranshul Chandhok</a>
     </footer>
@@ -62,14 +125,21 @@
       'https://raw.githubusercontent.com/2600th/web-pages/gh-pages/ar_applereality/model_3.glb',
     ];
 
-    let currentModel = 0;
-
     const modelViewer = document.querySelector('model-viewer');
-    const switchModelButton = document.querySelector('#switchModelButton');
+    const button1976 = document.querySelector('#button1976');
+    const button2007 = document.querySelector('#button2007');
+    const button2023 = document.querySelector('#button2023');
 
-    switchModelButton.addEventListener('click', () => {
-      currentModel = (currentModel + 1) % modelUrls.length;
-      modelViewer.src = modelUrls[currentModel];
+    button1976.addEventListener('click', () => {
+      modelViewer.src = modelUrls[0];
+    });
+
+    button2007.addEventListener('click', () => {
+      modelViewer.src = modelUrls[1];
+    });
+
+    button2023.addEventListener('click', () => {
+      modelViewer.src = modelUrls[2];
     });
   </script>
   <script src="script.js"></script>
