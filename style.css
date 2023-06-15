@@ -11,7 +11,7 @@
 }
 
 .hr { 
-	width:380px;
+	width:600px;
 	height:0;
 	border-bottom:dotted 2px black;
 }
@@ -37,15 +37,15 @@ body {
 }
 
 #content.tide{
-    	width: 150px;
-    	height: 150px;
+    	width: 600px;
+    	height: 600px;
 }
 
 #main.dota{
 	position: relative;
 	top: 10%;
 	left: 50%;
-	margin-left: -150px;
+	margin-left: -250px;
 }
 
 p {
@@ -53,7 +53,7 @@ p {
 	font-size: 20pt; 
 	line-height: 28px;
 	font-weight: lighter;
-	width: 380px;
+	width: 600px;
 	text-align: left;
 	margin-bottom: 24px;
 	
