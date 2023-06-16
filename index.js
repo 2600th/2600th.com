@@ -35,10 +35,21 @@ window.addEventListener('load', function() {
     renderer.emptyBuffer();
   }
 
-  document.addEventListener('mousemove', function(e) {
-    setTransform(e.clientX / 400, e.clientY / 400);
+  function handleInteraction(e) {
+    var x, y;
+    if (e.touches) {
+      x = e.touches[0].clientX / 400;
+      y = e.touches[0].clientY / 400;
+    } else {
+      x = e.clientX / 400;
+      y = e.clientY / 400;
+    }
+    setTransform(x, y);
     draw();
-  }, false);
+  }
+
+  document.addEventListener('mousemove', handleInteraction, false);
+  document.addEventListener('touchmove', handleInteraction, false);
 
   draw();
 }, false);
