@@ -41,18 +41,18 @@ html {
 
 body {
   background: var(--bg-gradient);
-  padding: 20px;
+  padding: 12px;
   font-family: my_font;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.4;
   color: var(--text-color);
   text-align: justify;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 p {
-  margin-bottom: 1rem;
-  min-height: 1.5em;
+  margin-bottom: 0.75rem;
+  min-height: 1.4em;
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
@@ -62,15 +62,15 @@ p {
 }
 
 p.hello {
-  font-size: 24px;
+  font-size: 22px;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .content {
@@ -80,7 +80,7 @@ p.hello {
 .panel {
   width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .loading-text {
@@ -110,8 +110,8 @@ canvas:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
   padding: 0;
 }
 
@@ -166,7 +166,7 @@ canvas:hover {
 a {
   color: var(--link-color);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-family: my_font;
   outline: none;
   transition: color 0.2s ease;
@@ -234,7 +234,7 @@ a:hover {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
-  min-height: 1.5em;
+  min-height: 1.4em;
   white-space: pre-wrap;
 }
 
@@ -245,15 +245,15 @@ a:hover {
   overflow-wrap: break-word;
   width: 100%;
   position: relative;
-  min-height: 1.5em;
-  line-height: 1.5;
+  min-height: 1.4em;
+  line-height: 1.4;
   white-space: pre-wrap;
   letter-spacing: normal;
 }
 
 @media screen and (max-width: 600px) {
   body {
-    padding: 30px 20px;
+    padding: 25px 15px;
     font-size: 18px;
     text-align: left;
   }
@@ -263,7 +263,7 @@ a:hover {
   }
 
   canvas {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     width: 100% !important;
     height: auto !important;
   }
